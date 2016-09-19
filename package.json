@@ -1,8 +1,19 @@
 {
-  "name": "google-maps",
+  "name": "connect-my-school-web",
   "version": "1.0.0",
   "description": "A Vue.js project",
-  "author": "Cristian Jaramillo <cristian_gerar@hotmail.com>",
+  "author": [
+    { 
+      "name" : "Marizol Carrillo", 
+      "email" : "marcarrimor@gmail.com",
+      "url" : "http://marisolenlaweb.com"
+    },
+    { 
+      "name" : "Cristian Jaramillo", 
+      "email" : "cristian_gerar@hotmail.com",
+      "url" : "https://about.me/cristian-jaramillo"
+    }
+  ],
   "private": true,
   "scripts": {
     "dev": "node build/dev-server.js",
