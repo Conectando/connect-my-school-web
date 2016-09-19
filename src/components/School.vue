@@ -8,7 +8,7 @@
             <img src="../assets/img/yuna.jpg" class="circle"/>
           </a>
           <a href="#!name"><span class="white-text name">MI ESCUELA</span></a>
-          <a href="#!email"><span class="white-text email">jdandturk@gmail.com</span></a>
+          <a href="#!email"><span class="white-text email">Bienvenidos</span></a>
         </div>
       </li>
       <div class="card"
@@ -19,19 +19,16 @@
             <div class="chip" v-for="turn in levels(school)">{{ turn }}</div>
             <star-rating value="4" :disabled="true">
             </star-rating>
-            </div>
+          </div>
             <div class="card-action more-info">
               <button href="!#"
                       class="btn purple darken-3" 
                  v-on:click.prevent="centerSchool(school, $event)">Ver más</button>
             </div>
-          </div>
-          
-        </div>
-    </ul>
-
-
+      </div>
+    </ul>      
   </div>
+    
 </template>
 
 <script>
