@@ -6,7 +6,7 @@
 		<div class="row" style="margin-top:3em;">
 			<div class="col col l6 offset-l3 m10 offset-m1 s12">
 				
-				<form class="z-depth-2">
+				<form class="z-depth-2 pd-10">
 
 					<md-tabs :active.sync="tab" class="z-depth-1">
 					    <md-tab name="parent">

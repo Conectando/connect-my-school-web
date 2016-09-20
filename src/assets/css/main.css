@@ -1,3 +1,7 @@
+.text-purple{
+	color: #6a1b9a !important;
+}
+
 nav a.brand-logo{
 	color: #6a1b9a;
 	padding-left: 10px;
@@ -67,4 +71,33 @@ thead th{
 
 td, th {
     padding: 20px 15px;
+}
+
+.pd-10{
+	margin-top: 20%;
+	margin-bottom: 20%;
+}
+
+.title-data{
+	color: #6a1b9a;
+	font-weight: bolder;
+	
+}
+
+.description-data{
+	font-size: 1.1em;
+	padding: 10px 0 30px 0;
+}
+
+.card .card-content .card-title {
+     line-height: 30px; 
+}
+
+.btn-download{
+	margin-left: 20px;
+	color: #000;
+}
+
+.btn-show{
+	margin-top: 12px;
 }

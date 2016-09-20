@@ -2,7 +2,7 @@
 	<footer class="page-footer grey lighten-1">
 		<div class="footer-copyright">
 	    	<div class="container center-align">
-	        	© 2014 Copyright Text
+	        	© 2016 Todos los derechos reservados
 	    	</div>
 	    </div>
 	</footer>
