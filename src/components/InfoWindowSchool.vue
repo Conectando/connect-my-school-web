@@ -34,7 +34,7 @@
 								<h6>{{ detail.level }}</h6>
 							    <p class="valign">
 							    	<i class="tiny material-icons purple-text text-darken-3">work</i>
-							    	&nbsp;Clave de centro de trabajo: {{ detail.key }}
+							    	&nbsp;Clave de centro de trabajo: {{ detail.cct }}
 							    </p>
 							    <p class="valign">Turno: {{ detail.turn }}</p>
 							    <p class="valign">Sostenimiento: {{ detail.sustenance }}</p>

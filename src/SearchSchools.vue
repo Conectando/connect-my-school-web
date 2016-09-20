@@ -80,14 +80,14 @@ export default {
 			zoom: 8,
 			gridSize: 100,
 			icon: {
-	        	url: 'http://104.131.140.61/images/black-marker.png'
+	        	url: './static/img/black-marker.png'
 	        },
 	        options: {
 	        	scrollwheel: true
 	        },
 	        cluster_styles : [
 			     {
-			        url: 'http://104.131.140.61/images/m1.png',
+			        url: './static/img/m1.png',
 			        height: 106,
 			        width: 106,
 			        textColor: '#44A8FA',

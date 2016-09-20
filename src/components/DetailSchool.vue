@@ -2,7 +2,7 @@
 	<label class="info-middle">
 		<i class="small material-icons purple-text text-darken-3">work</i> 
 	</label>
-	Clave de centro de trabajo: {{ detail.key }}<br/>
+	Clave de centro de trabajo: {{ detail.cct }}<br/>
 	<label class="info-middle">
 	 	<i class="small material-icons school-phone">phone</i> 
 	</label> 

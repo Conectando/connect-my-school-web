@@ -218,7 +218,7 @@ export default {
 				},
 				height: '244px',
 				icon: {
-		        	url: 'http://104.131.140.61/images/black-marker.png'
+		        	url: './static/img/black-marker.png'
 		        },
 				options: {
 		        	scrollwheel: true
