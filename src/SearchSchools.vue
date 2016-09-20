@@ -28,7 +28,7 @@
 	        	</a>
 	        </div>
 	    </nav>
-	    <school :schools.sync="schools" :center.sync="center" :zoom.sync="zoom"></school>
+	    <school :schools.sync="schools" :load-more.sync="loadMore" :center.sync="center" :zoom.sync="zoom"></school>
 		<map :center.sync="center"
 		     :zoom.sync="zoom"
 		     :options="options"
@@ -45,7 +45,7 @@
 				</marker>
 			</cluster>
 	    </map>
-		<!-- <pre>{{ $data | json }}</pre> -->
+		<!-- <pre>{{ $data.meta | json }}</pre> -->
     </header>
     <footer-school></footer-school>
 </template>
@@ -94,6 +94,7 @@ export default {
 			        textSize: 24
 			    }
 			],
+			load: false,
 	        requests: {
 	        	default : {
 	        		options: {
@@ -149,14 +150,16 @@ export default {
 	    this.map.height = ($(window).height() - 128) + 'px';
 
 		this.request = this.requests.default;
-
+		this.load = true;
 		this.$http.get(this.request.uri, this.request.options)
 				  .then(this.responseSuccess, this.responseError);
 	},
 	methods: {
 		responseSuccess(response) {
-			this.schools = response.body.data.filter(this.filterSchool);
+			// this.schools = 
+			response.body.data.filter(this.filterSchool);
 			this.meta = response.body.meta;
+			this.load = false;
 		},
 
 		filterSchool(school) {
@@ -169,6 +172,9 @@ export default {
 				 ' '  + this.firstUpperCase(school.location)*/ + ', ' + this.firstUpperCase(school.municipality) + 
 				 ', ' + this.firstUpperCase(school.state);
 			school.full_address = full_address;	
+
+			this.schools.push(school);
+			
 			return school;
 		},
 
@@ -184,7 +190,7 @@ export default {
 		},
 
 		responseError(response) {
-
+			this.load = false;
 		},
 	    markerCliked(school) {
 	    	this.schools.forEach(function(school, index){
@@ -204,6 +210,34 @@ export default {
 				this.zoom = this.map.zoom;
 				this.search = '';
 	    	} 
+		},
+		loadMore() {
+
+			console.log('cargar más');
+
+			// validamos que existan más datos
+			if(this.meta.pagination.links.next != undefined) {
+
+				// verificamos que no exista una solicitud en proceso
+				if(!this.load)
+				{
+					
+					if(this.request.options.params.page == undefined) {
+						if(this.meta.pagination.total_pages >= 2) {
+							this.request.options.params.page = 2;	
+						}
+					} else if(this.meta.pagination.total_pages > this.request.options.params.page) {
+						this.request.options.params.page++;
+					}
+
+					if(this.meta.pagination.total_pages > this.meta.pagination.current_page) {
+						this.load = true;
+						this.$http.get(this.request.uri, this.request.options)
+					  			  .then(this.responseSuccess, this.responseError);
+					}
+
+				}
+			}
 		}
 	}
 

@@ -2,7 +2,8 @@ import Vue from 'vue'
 import VueMaterialComponents from 'vue-material-components'
 import VueResource from 'vue-resource'
 import VueRouter from 'vue-router'
- 
+import VueScroll from 'vue-scroll'
+
 import App from './App'
 import Home from './Home'
 import PublicData from './PublicData'
@@ -18,6 +19,7 @@ Vue.component('star-rating', StarRating)
 Vue.use(VueMaterialComponents)
 Vue.use(VueResource)
 Vue.use(VueRouter)
+Vue.use(VueScroll)
 
 var root = 'http://104.131.140.61';
 Vue.http.headers.common['Accept'] = 'application/json';

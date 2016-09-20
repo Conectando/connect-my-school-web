@@ -1,6 +1,7 @@
 <template>
   <div class="school">
-    <ul id="nav-mobile" class="side-nav fixed float">
+<!--     <pre>{{ $data | json }}</pre> -->
+    <ul id="nav-mobile" class="side-nav fixed float" v-scroll="onScroll">
       <li>
         <div class="userView">
           <img src="../assets/img/office.jpg" class="background"/>
@@ -33,8 +34,6 @@
 
 <script>
 
-// import StarRating from './StarRating'
-
 export default {
 
   props: {
@@ -51,6 +50,14 @@ export default {
     zoom: {
       type: Number,
       required: true
+    },
+    loadMore: {
+        type: Function,
+        required: false,
+        twoWay: true,
+        default: function() {
+          console.log('más');
+        }
     }
   },
   data: function() {
@@ -58,7 +65,8 @@ export default {
       class: {
         active: false
       },
-      busy: false
+      busy: false,
+      position: {scrollTop: 0, scrollLeft: 0}
     };
   },
   ready: function() {
@@ -107,12 +115,39 @@ export default {
 
       return levels;
     },
-    loadMore() {
-      console.log('más');
+    onScroll(e, position) {
+
+      this.position = position;
+
+
+      
+      var scrollTop = position.scrollTop + $('#nav-mobile li').outerHeight() + $('#nav-mobile .card').outerHeight() + 430;
+
+      console.log(scrollTop + ' >= ' + (document.getElementById("nav-mobile").scrollHeight));
+
+      if(scrollTop >= (document.getElementById("nav-mobile").scrollHeight))
+      {
+        console.log("cargar más datos");
+        this.loadMore();
+      }
+
+      // var height = $("#nav-mobile").height();
+      // var scrollHeight = document.getElementById("nav-mobile").scrollHeight;
+
+      // console.log(position.scrollTop + ' >=  ' + (scrollHeight - 430));
+
+      // if(position.scrollTop >= (scrollHeight - 430))
+      // {
+      //   console.log("cargar más datos");
+      //   this.loadMore();
+      // } else {
+      //   console.log("que demonios pasa");
+      // }
+
     }
   },
   components: {
-    // StarRating,
+
   }
 }
 </script>
