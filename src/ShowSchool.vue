@@ -14,7 +14,7 @@
 
 	    		<md-tabs :active.sync="tab" class="z-depth-1">
 					<md-tab :name="'detail' + detail.id" v-for="detail in school.details">
-						<a class="text-purple text-darken-3">{{ detail.level }}</a>
+						<a class="text-purple text-darken-3">{{ detail.level }} {{ detail.turn }}</a>
 					</md-tab>
 				</md-tabs>
 

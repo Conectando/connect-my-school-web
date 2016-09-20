@@ -115,7 +115,4 @@ export default {
 </script>
 
 <style scope>
-	header, main, footer {
-	    padding-left: 0px;
-	}
 </style>

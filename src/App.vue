@@ -8,7 +8,6 @@ import $ from 'jquery';
 
 import './assets/css/materialize.min.css'
 import './assets/css/main.css'
-import './assets/css/escuelas.css'
 
 window.$ = $;
 window.jQuery = $;

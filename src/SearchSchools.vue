@@ -3,7 +3,7 @@
 		
 		<nav class="purple darken-3">
 			<div class="nav-wrapper">
-				<a v-link="{ name: 'home' }" class="brand-logo center">Conectando mi Escuela</a>
+				<a v-link="{ name: 'home' }" class="brand-logo center">Mi Escuela</a>
 			</div>
 		</nav>
 	    
@@ -56,6 +56,8 @@ import School from './components/School'
 import FooterSchool from './components/FooterSchool'
 import InfoWindowSchool from './components/InfoWindowSchool'
 import {Cluster, InfoWindow, load, Map, Marker} from 'vue-google-maps'
+
+import './assets/css/escuelas.css'
 
 load('AIzaSyD__96IlUzlRf46hSUAixxd6i95M_4s5do')
 
@@ -141,7 +143,7 @@ export default {
 		$('.button-collapse').sideNav({
 	    	menuWidth: 350, // Default is 240
 	        edge: 'left', // Choose the horizontal origin
-	        closeOnClick: false // Closes side-nav on <a> clicks, useful for Angular/Meteor
+	        closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
 	    });
 	    
 	    this.map.height = ($(window).height() - 128) + 'px';
@@ -210,13 +212,5 @@ export default {
 </script>
 
 <style scope>
-	header, main, header + footer {
-    	padding-left: 350px;
-	}
 
-	map {
-	    height: 600px;
-	    width: 100%;
-	    display: block;
-	}
 </style>
