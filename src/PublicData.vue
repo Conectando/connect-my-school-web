@@ -36,7 +36,7 @@
                                 <a class="waves-effect waves-light btn btn-download grey lighten-5" href="http://104.131.140.61/api/v0.1/cct/download/activos?type=xlsx">xlsx</a>
                             </div>
                             <div class="col s12 m4 right-align">
-                                <a class="waves-effect waves-light btn purple darken-3 btn-show">VER MÁS</a>
+                                <a class="waves-effect waves-light btn purple darken-3 btn-show" href="http://104.131.140.61/#escuelas">VER MÁS</a>
                             </div>
                         </div>
         
@@ -76,7 +76,7 @@
                                 <a class="waves-effect waves-light btn btn-download grey lighten-5" href="http://104.131.140.61/api/v0.1/cct/download/indicadores?type=xlsx">xlsx</a>
                             </div>
                             <div class="col s12 m4 right-align">
-                                <a class="waves-effect waves-light btn purple darken-3 btn-show">VER MÁS</a>
+                                <a class="waves-effect waves-light btn purple darken-3 btn-show" href="http://104.131.140.61/#indicadores">VER MÁS</a>
                             </div>
                         </div>
         
@@ -116,7 +116,7 @@
                                 <a class="waves-effect waves-light btn btn-download grey lighten-5" href="http://104.131.140.61/api/v0.1/cct/download/estadisticas?type=xlsx">xlsx</a>
                             </div>
                             <div class="col s12 m4 right-align">
-                                <a class="waves-effect waves-light btn purple darken-3 btn-show">VER MÁS</a>
+                                <a class="waves-effect waves-light btn purple darken-3 btn-show" href="http://104.131.140.61/#estadisticas">VER MÁS</a>
                             </div>
                         </div>
         
@@ -156,7 +156,7 @@
                                 <a class="waves-effect waves-light btn btn-download grey lighten-5" href="http://104.131.140.61/api/v0.1/cct/download/planea?type=xlsx">xlsx</a>
                             </div>
                             <div class="col s12 m4 right-align">
-                                <a class="waves-effect waves-light btn purple darken-3 btn-show">VER MÁS</a>
+                                <a class="waves-effect waves-light btn purple darken-3 btn-show" href="http://104.131.140.61/#resultados-planea">VER MÁS</a>
                             </div>
                         </div>
         

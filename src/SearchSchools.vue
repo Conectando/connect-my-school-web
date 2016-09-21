@@ -212,9 +212,6 @@ export default {
 	    	} 
 		},
 		loadMore() {
-
-			console.log('cargar más');
-
 			// validamos que existan más datos
 			if(this.meta.pagination.links.next != undefined) {
 
@@ -238,6 +235,7 @@ export default {
 
 				}
 			}
+			
 		}
 	}
 

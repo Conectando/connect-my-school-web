@@ -118,31 +118,14 @@ export default {
     onScroll(e, position) {
 
       this.position = position;
-
-
       
       var scrollTop = position.scrollTop + $('#nav-mobile li').outerHeight() + $('#nav-mobile .card').outerHeight() + 430;
-
-      console.log(scrollTop + ' >= ' + (document.getElementById("nav-mobile").scrollHeight));
 
       if(scrollTop >= (document.getElementById("nav-mobile").scrollHeight))
       {
         console.log("cargar más datos");
         this.loadMore();
       }
-
-      // var height = $("#nav-mobile").height();
-      // var scrollHeight = document.getElementById("nav-mobile").scrollHeight;
-
-      // console.log(position.scrollTop + ' >=  ' + (scrollHeight - 430));
-
-      // if(position.scrollTop >= (scrollHeight - 430))
-      // {
-      //   console.log("cargar más datos");
-      //   this.loadMore();
-      // } else {
-      //   console.log("que demonios pasa");
-      // }
 
     }
   },
