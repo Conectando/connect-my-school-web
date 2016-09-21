@@ -20,7 +20,7 @@
 	     	 	 value="4" 
 	       		 :disabled="true">
 	   	<i class="material-icons">verified_user</i></star-rating>
-	<star-rating label="Hambiente"
+	<star-rating label="ambiente"
 				 color="#6A1B9A"
 			 	 value="5" 
 				 :disabled="true">
